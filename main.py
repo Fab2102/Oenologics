@@ -5,7 +5,7 @@ from datetime import time
 
 
 
-st.set_page_config(page_title="Önologics", layout="centered", page_icon="🍷")
+st.set_page_config(page_title="Oenologics", layout="centered", page_icon="🍷")
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["🍇Alkoholausbeute", "🍬Anreicherung", "🧪Schwefelung", "🍋Ansäuerung", "📖Kellerbuch"])
 
 
