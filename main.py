@@ -1,11 +1,9 @@
 import streamlit as st
 import pandas as pd
-from datetime import date
-from datetime import time
 
 
 
-st.set_page_config(page_title="Oenologics", layout="centered", page_icon="🍷")
+st.set_page_config(page_title="Önologics", layout="centered", page_icon="🍷")
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["🍇Alkoholausbeute", "🍬Anreicherung", "🧪Schwefelung", "🍋Ansäuerung", "📖Kellerbuch"])
 
 
@@ -60,7 +58,7 @@ def add_acid(liter_of_wine_for_acidification, additonal_acid, type_of_acid):
 ### displaying tabs
 
 with tab1:
-    st.info("Offizielle Formel der Landesregierung NÖ", icon="ℹ️")
+    st.info("Formel der Landesreg. NÖ", icon="ℹ️")
     st.write("######")
     switch_calc = st.toggle("Berechnung umkehren")
     
@@ -91,7 +89,7 @@ with tab1:
 
       
 with tab2:
-    st.info("Anreicherung auf Basis von vol.%", icon="ℹ️")
+    st.info("Basierend auf vol.%", icon="ℹ️")
     st.header("Anreicherung")
 
     liter_of_wine = st.number_input("Weinmenge (in Liter)", min_value=0, max_value=200000)
@@ -164,22 +162,17 @@ with tab5:
     
     
     data_df = pd.DataFrame(
-        {"Tank_ID": [None], "Procedure": [None], "Date": [pd.NaT], "Time" : [pd.NaT]}
+        {"Tank_ID": [None], "Procedure": [None], "Date": [pd.NaT]}
     )
 
     edited_df = st.data_editor(
         data_df,
         column_config={
-            "Tank_ID": st.column_config.NumberColumn("Tank Nr."),
+            "Tank_ID": st.column_config.NumberColumn("Tank Nr.", width="small"),
             "Procedure": st.column_config.TextColumn("Maßnahme"),
-            "Date": st.column_config.DateColumn("Datum", format="DD.MM.YYYY"),
-            "Time": st.column_config.TimeColumn("Uhrzeit", format="HH:mm")   
+            "Date": st.column_config.DateColumn("Datum", format="DD.MM.YYYY"),   
         },
         hide_index=True,
         use_container_width=True,
         num_rows="dynamic"
     )
-    
-    
-    st.write("######")
-    # st.button("Download Excel File")
