@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Oenologics", layout="centered", page_icon="🍷", )
 
-st.title("Oenologics WebApp")
+st.title("➗Oenologics WebApp")
 
 
 st.write("""Dieses Tool unterstützt dich bei der Durchführung wichtiger Berechnnungen im Weinkeller.""")
