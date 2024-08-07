@@ -16,15 +16,15 @@ acid_quantity_in_l = acid_quantity[1] / 1000
 st.write("######")
 
 
-if type_of_acid == "Weinsäure":
+if type_of_acid == "Weinsäure" and acid_quantity_in_kg > 0:
     st.metric(label="Weinsäure (in kg)", value=f"{acid_quantity_in_kg:.1f}")
     #1.00 g/l WS = + 1 g/l GS ber. als WS
 
-elif type_of_acid == "Äpfelsäure":
+elif type_of_acid == "Äpfelsäure" and acid_quantity_in_kg > 0:
     st.metric(label="Äpfelsäure (in kg)", value=f"{acid_quantity_in_kg:.1f}")
     #0.89 g/l ÄS = + 1 g/l GS ber. als WS
     
-elif type_of_acid == "Milchsäure":
+elif type_of_acid == "Milchsäure" and acid_quantity_in_kg and acid_quantity_in_l > 0:
     
     result_lactic_acid1, result_lactic_acid2 = st.columns(2)
     
@@ -33,6 +33,6 @@ elif type_of_acid == "Milchsäure":
     #1.25 ml/l MS = + 1 g/l GS ber. als WS
     #1.50 g/l  MS = + 1 g/l GS ber. als WS
     
-elif type_of_acid == "Zitronensäure":
+elif type_of_acid == "Zitronensäure" and acid_quantity_in_kg > 0:
         st.metric(label="Zitronensäure (in kg)", value=f"{acid_quantity_in_kg:.1f}")
     #0.85 g/l ZS = + 1 g/l GS ber. als WS

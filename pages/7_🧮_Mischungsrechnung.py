@@ -13,7 +13,7 @@ liquid2 = row2_col1.number_input("Flüssigkeit 2 (in Liter)", min_value=0, max_v
 conc2 = row2_col2.number_input("Konzentration 2", min_value=0.00, max_value=10000.00)
 
 
-unit = st.selectbox("Einheit", ("g/l", "mg/l", "°KMW", "vol.%"))
+unit = st.selectbox("Einheit", ("g/l", "mg/l", "°KMW", "vol.%"), index = None, placeholder="Einheit auswählen...")
 
 
 results_mixing_liquids = mixing_liquids(liquid1, liquid2, conc1, conc2)
