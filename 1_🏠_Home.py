@@ -3,13 +3,13 @@ import streamlit as st
 st.set_page_config(page_title="Oenologics", layout="centered", page_icon="🍷", )
 
 st.title("Oenologics WebApp")
-st.write("""
-             Dieses Tool unterstützt Sie bei der Durchführung wichtiger Berechnnungen im Weinkeller.
-             """)
 
 
+st.write("""Dieses Tool unterstützt dich bei der Durchführung wichtiger Berechnnungen im Weinkeller.""")
 
-st.subheader("Seiten", divider="grey")
+st.write("#####")
+
+st.subheader("Übersicht", divider="grey")
 st.page_link("1_🏠_Home.py", label="Home", icon="🏠")
 st.page_link("pages/2_🍇_Alkoholausbeute.py", label="Alkoholausbeute", icon="🍇")
 st.page_link("pages/3_🍬_Anreicherung.py", label="Anreicherung", icon="🍬")
